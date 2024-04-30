@@ -16,7 +16,7 @@ async function bootstrap() {
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('/swagger', app, document);
   
-  //process.env.TZ = '-03:00';
+  process.env.TZ = 'America/Sao_Paulo';
 
   app.useGlobalPipes(new ValidationPipe());
 
