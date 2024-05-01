@@ -25,7 +25,7 @@ export class Postagem{
     texto: string;
 
     @ApiProperty()
-    @UpdateDateColumn()
+    @UpdateDateColumn({ type: 'timestamp', default: () => 'CURRENT_TIMESTAMP', onUpdate: 'CURRENT_TIMESTAMP' })
     data: Date;
 
     @ApiProperty({ type: () => Tema })
